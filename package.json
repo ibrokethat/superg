@@ -1,0 +1,58 @@
+{
+  "author" : {
+    "Simon Jefford" : "si@ibrokethat.com",
+    "Christos Constandinou" : "constantology@gmail.com"
+  },
+  "name" : "supergoat",
+  "version" : "0.0.1",
+  "description" : "prototype my enery ui stack",
+  "main" : "index.js",
+  "private" : true,
+  "repository" : {
+    "type" : "git",
+    "url" : "git@github.com:ConnectedHomes/supergoat.git"
+  },
+  "scripts" : {
+    "test" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R spec --ui bdd ./test",
+    "test-cov" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive --require blanket -R html-cov --ui bdd ./test/**/*.js > test-coverage.html",
+    "test-jenkins" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R xunit --ui bdd ./test/**/*.js > test-reports.xml",
+    "start" : "node --harmony --harmony_typeof index.js"
+  },
+  "license" : "ISC",
+  "dependencies" : {
+    "superposition": "git+ssh://git@github.com:ibrokethat/superposition.git#useful-integration",
+    "su-define-object" : "git+ssh://git@github.com:super-useful/su-define-object.git",
+    "co" : "3.1.x",
+    "co-defer" : "0.1.x",
+    "co-request" : "0.2.x",
+    "co-sleep" : "0.0.x",
+    "config" : "0.4.x",
+    "js-yaml" : "3.2.x",
+    "moment-timezone" : "0.2.x",
+    "pm2" : "0.10.x",
+    "require-all" : "0.0.x",
+    "shelljs" : "0.3.x",
+    "super-func": "x",
+    "super-iter" : "git+ssh://git@github.com:ibrokethat/iter.git#v0.1.0",
+    "thunkify" : "2.1.2",
+    "useful-copy" : "x",
+    "useful-value" : "x",
+    "yaml" : "0.2.x"
+  },
+  "devDependencies" : {
+    "chai" : "1.9.x",
+    "mocha" : "1.21.x",
+    "blanket" : "1.1.x",
+    "request" : "2.40.x",
+    "sinon" : "1.10.x",
+    "sinon-chai" : "2.5.x",
+    "rewire" : "2.1.x"
+  },
+  "config" : {
+    "blanket" : {
+      "pattern" : ["/apis", "/lib"]
+    }
+  }
+}
+
+
