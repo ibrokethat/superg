@@ -1,0 +1,13 @@
+hosts:
+  -
+  hostname: megoat
+  protocol: "http:"
+  host: "localhost:3030"
+  descriptor_uri: "/apis"
+  format: "su-apiserver"
+  -
+  hostname: megoat-ui-api
+  protocol: "http:"
+  host: "localhost:4040"
+  descriptor_uri: "/apis"
+  format: "su-apiserver"
