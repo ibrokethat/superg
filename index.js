@@ -1,6 +1,6 @@
 var path = require('path');
 var co = require('co');
-var CONFIG = require('config');
+var CONF = require('config');
 var moment = require('moment-timezone');
 
 // globally set the timezone to UTC
@@ -18,5 +18,5 @@ module.exports.app = {};
 
 co(function* () {
     // start the server
-    module.exports.app = yield* require('superposition')(src);
+    module.exports.app = yield require('superposition')(CONF.app.stable, src[CONF.app.stable.version]);
 })();

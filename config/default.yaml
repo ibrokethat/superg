@@ -1,6 +1,6 @@
 app:
-  'v0.0.0':
-    release: stable
+  stable:
+    version: 'v0.0.0'
     port: 5000
 apis:
   base: "/apis"
