@@ -18,5 +18,5 @@ module.exports.app = {};
 
 co(function* () {
     // start the server
-    module.exports.app = yield require('superposition')(CONF.app.stable, src[CONF.app.stable.version]);
+    module.exports.app = yield require('superposition').default(CONF.app.stable, src[CONF.app.stable.version]);
 })();
