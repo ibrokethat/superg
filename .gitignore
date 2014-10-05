@@ -24,3 +24,4 @@ config/runtime.json
 logs/
 
 static/build
+lib

@@ -1,58 +1,69 @@
 {
-  "author" : {
-    "Simon Jefford" : "si@ibrokethat.com",
-    "Christos Constandinou" : "constantology@gmail.com"
+  "author": {
+    "Simon Jefford": "si@ibrokethat.com",
+    "Christos Constandinou": "constantology@gmail.com"
   },
-  "name" : "supergoat",
-  "version" : "0.0.1",
-  "description" : "prototype my enery ui stack",
-  "main" : "index.js",
-  "private" : true,
-  "repository" : {
-    "type" : "git",
-    "url" : "git@github.com:ConnectedHomes/supergoat.git"
+  "name": "supergoat",
+  "version": "0.0.1",
+  "description": "prototype my enery ui stack",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ConnectedHomes/supergoat.git"
   },
-  "scripts" : {
-    "test" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R spec --ui bdd ./test",
-    "test-cov" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive --require blanket -R html-cov --ui bdd ./test/**/*.js > test-coverage.html",
-    "test-jenkins" : "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R xunit --ui bdd ./test/**/*.js > test-reports.xml",
-    "start" : "node --harmony --harmony_typeof index.js"
+  "scripts": {
+    "test": "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R spec --ui bdd ./test",
+    "test-cov": "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive --require blanket -R html-cov --ui bdd ./test/**/*.js > test-coverage.html",
+    "test-jenkins": "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R xunit --ui bdd ./test/**/*.js > test-reports.xml",
+    "start": "node --harmony --harmony_typeof index.js",
+    "prestart": "node --harmony --harmony_typeof bin/prestart.js"
   },
-  "license" : "ISC",
-  "dependencies" : {
-    "superposition": "git+ssh://git@github.com:ibrokethat/superposition.git#useful-integration",
-    "su-define-object" : "git+ssh://git@github.com:super-useful/su-define-object.git",
-    "co" : "3.1.x",
-    "co-defer" : "0.1.x",
-    "co-request" : "0.2.x",
-    "co-sleep" : "0.0.x",
-    "config" : "0.4.x",
-    "js-yaml" : "3.2.x",
-    "moment-timezone" : "0.2.x",
-    "pm2" : "0.10.x",
-    "require-all" : "0.0.x",
-    "shelljs" : "0.3.x",
+  "license": "ISC",
+  "dependencies": {
+    "co": "3.1.x",
+    "co-defer": "0.1.x",
+    "co-request": "0.2.x",
+    "co-sleep": "0.0.x",
+    "config": "0.4.x",
+    "del": "^0.1.3",
+    "esperanto": "^0.3.11",
+    "glob": "^4.0.6",
+    "gulp": "^3.8.8",
+    "gulp-concat": "^2.4.1",
+    "gulp-esnext": "^1.2.0",
+    "gulp-esperanto": "^0.0.1",
+    "js-yaml": "3.2.x",
+    "moment-timezone": "0.2.x",
+    "pm2": "0.10.x",
+    "require-all": "0.0.x",
+    "run-sequence": "^1.0.1",
+    "shelljs": "0.3.x",
+    "su-define-object": "git+ssh://git@github.com:super-useful/su-define-object.git",
+    "super-async": "0.0.5",
     "super-func": "x",
-    "super-iter" : "git+ssh://git@github.com:ibrokethat/iter.git#v0.1.0",
-    "thunkify" : "2.1.2",
-    "useful-copy" : "x",
-    "useful-value" : "x",
-    "yaml" : "0.2.x"
+    "super-iter": "git+ssh://git@github.com:ibrokethat/iter.git#v0.1.0",
+    "superposition": "git+ssh://git@github.com:ibrokethat/superposition.git#useful-integration",
+    "thunkify": "2.1.2",
+    "useful-copy": "x",
+    "useful-value": "x",
+    "yaml": "0.2.x"
   },
-  "devDependencies" : {
-    "chai" : "1.9.x",
-    "mocha" : "1.21.x",
-    "blanket" : "1.1.x",
-    "request" : "2.40.x",
-    "sinon" : "1.10.x",
-    "sinon-chai" : "2.5.x",
-    "rewire" : "2.1.x"
+  "devDependencies": {
+    "chai": "1.9.x",
+    "mocha": "1.21.x",
+    "blanket": "1.1.x",
+    "request": "2.40.x",
+    "sinon": "1.10.x",
+    "sinon-chai": "2.5.x",
+    "rewire": "2.1.x"
   },
-  "config" : {
-    "blanket" : {
-      "pattern" : ["/apis", "/lib"]
+  "config": {
+    "blanket": {
+      "pattern": [
+        "/apis",
+        "/lib"
+      ]
     }
   }
 }
-
-

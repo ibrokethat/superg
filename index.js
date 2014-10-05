@@ -12,11 +12,11 @@ process.env.TZ = 'UTC';
 // moment.localeData(CONFIG.date.lang)._week.dow = CONFIG.date.start_of_week;
 
 //  load the src files
-var src = require('require-all')(path.join(process.cwd(), 'src'));
+var lib = require('require-all')(path.join(process.cwd(), 'lib'));
 
 module.exports.app = {};
 
 co(function* () {
     // start the server
-    module.exports.app = yield require('superposition').default(CONF.app.stable, src[CONF.app.stable.version]);
+  module.exports.app = yield require('superposition').default(CONF.app.stable, lib);
 })();
