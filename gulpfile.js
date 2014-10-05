@@ -20,7 +20,7 @@ var paths = {
 // A gulpfile is just another node program and you can use all packages available on npm
 gulp.task('clean', function(cb) {
   // You can use multiple globbing patterns as you would with `gulp.src`
-  del(['lib', 'src/**/imports.js'], cb);
+  del(['lib', 'src/imports.js'], cb);
 });
 
 
@@ -37,10 +37,8 @@ gulp.task('create-imports', function() {
 
   return gulp.src(paths.src)
     .pipe(imports())
-    .pipe(concat('imports.js'))
+    .pipe(concat('libs.js'))
     .pipe(gulp.dest('src'));
-
-  });
 
 });
 
@@ -62,8 +60,8 @@ gulp.task('es6-node', function() {
 gulp.task('prestart', ['clean'], function (cb) {
 
   runSequence(
-    'create-imports',
     'copy-cmp-index',
+    'create-imports',
     'es6-node' ,
     cb
   );

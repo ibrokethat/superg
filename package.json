@@ -6,7 +6,7 @@
   "name": "supergoat",
   "version": "0.0.1",
   "description": "prototype my enery ui stack",
-  "main": "index.js",
+  "main": "lib/index.js",
   "private": true,
   "repository": {
     "type": "git",
@@ -16,8 +16,8 @@
     "test": "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R spec --ui bdd ./test",
     "test-cov": "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive --require blanket -R html-cov --ui bdd ./test/**/*.js > test-coverage.html",
     "test-jenkins": "export NODE_ENV='test' && node --harmony --harmony_typeof ./node_modules/.bin/mocha --colors --harmony --harmony_typeof --recursive -R xunit --ui bdd ./test/**/*.js > test-reports.xml",
-    "start": "node --harmony --harmony_typeof index.js",
-    "prestart": "node --harmony --harmony_typeof bin/prestart.js"
+    "start": "node --harmony --harmony_typeof lib/index.js",
+    "prestart": "gulp prestart"
   },
   "license": "ISC",
   "dependencies": {
