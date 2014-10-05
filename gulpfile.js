@@ -35,7 +35,7 @@ gulp.task('copy-cmp-index', function() {
 //  creates an imports file
 gulp.task('create-imports', function() {
 
-  return gulp.src(paths.src)
+  return gulp.src([paths.src, '!src/index.js', '!src/libs.js'])
     .pipe(imports())
     .pipe(concat('libs.js'))
     .pipe(gulp.dest('src'));

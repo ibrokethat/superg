@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as co from 'co';
 import * as CONF from 'config';
 import * as moment from 'moment-timezone';
-import * as superposition from 'superposition';
+import superposition from 'superposition';
 
 import * as libs from './libs';
 
